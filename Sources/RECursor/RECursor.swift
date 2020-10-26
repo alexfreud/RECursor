@@ -17,7 +17,7 @@ public final class RECursor {
     private var lastSetCursor: NSCursor = NSCursor.current
     private var currentFrame: Int = 0
 
-    convenience init?(cursor fileName: String) {
+    public convenience init?(cursor fileName: String) {
         guard let fileUrl = Bundle.main.url(forResource: fileName,
                                             withExtension: nil) else {
             return nil
@@ -26,7 +26,7 @@ public final class RECursor {
         self.init(cursor: cursorData)
     }
 
-    init?(cursor data: Data?) {
+    public init?(cursor data: Data?) {
         guard let data = data else { return nil }
         cursor = data.cursorData
     }
