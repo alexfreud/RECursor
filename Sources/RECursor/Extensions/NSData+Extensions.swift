@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import ImageIO
 
 internal extension Data {
     func object<T>(at index: Index) -> T {
